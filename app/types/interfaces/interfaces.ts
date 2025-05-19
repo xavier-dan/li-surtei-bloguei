@@ -44,3 +44,15 @@ export interface FavoriteButtonProps {
 export interface ShareButtonProps {
   onClick: (e: React.MouseEvent) => void;
 }
+
+export interface GoogleBookItem {
+  id: string;
+  volumeInfo: {
+    title: string;
+    authors?: string[];
+    description?: string;
+    imageLinks?: {
+      thumbnail?: string;
+    };
+  };
+}

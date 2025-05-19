@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BookProps } from '../types/interfaces/interfaces';
+import { BookProps, GoogleBookItem } from '../types/interfaces/interfaces';
 
 export const useBooks = (query: string = 'inpublisher:Seguinte') => {
     const [books, setBooks] = useState<BookProps[]>([]);
@@ -10,7 +10,7 @@ export const useBooks = (query: string = 'inpublisher:Seguinte') => {
             try {
                 const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
                 const data = await response.json();
-                const listaLivros: BookProps[] = data.items.map((item: any) => ({
+                const listaLivros: BookProps[] = data.items.map((item: GoogleBookItem) => ({
                     id: item.id,
                     title: item.volumeInfo.title,
                     authors: item.volumeInfo.authors || ['Autor Desconhecido'],

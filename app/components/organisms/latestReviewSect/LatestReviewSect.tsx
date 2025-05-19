@@ -5,7 +5,7 @@ import LatestReviewCard from '../../molecules/latestReviewCard/LatestReviewCard'
 export default function LatestReviewSect() {
     return (
         <>
-            <Title children="Confira a última resenha" />
+            <Title>Confira a última resenha</Title>
             <LatestReviewCard />
         </>
     );

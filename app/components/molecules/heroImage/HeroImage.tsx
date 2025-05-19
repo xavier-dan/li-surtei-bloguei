@@ -18,9 +18,9 @@ export default function HeroImage() {
             />
 
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black/40 px-4">
-                <HeroTitle children="NOVAS RESENHAS TODA QUINTA-FEIRA"/>
-                <HeroText children="As resenhas mais surtadas do Brasil"/>
-                <HeroButton children="Conheça" />
+                <HeroTitle>NOVAS RESENHAS TODA QUINTA-FEIRA</HeroTitle>
+                <HeroText>As resenhas mais surtadas do Brasil</HeroText>
+                <HeroButton>Conheça</HeroButton>
             </div>
         </div>
     )

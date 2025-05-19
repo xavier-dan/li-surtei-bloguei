@@ -10,7 +10,7 @@ export default function BookReviewList() {
 
     return (
         <>
-            <Title children="RESENHAS" />
+            <Title>RESENHAS</Title>
             {loading ? <p>Carregando as resenhas...</p> : (
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
