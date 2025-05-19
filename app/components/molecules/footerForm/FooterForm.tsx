@@ -1,0 +1,36 @@
+'use client';
+
+import Input from "../../atoms/footer/input/Input";
+import Button from "../../atoms/footer/button/Button";
+import Text from "../../atoms/footer/text/Text";
+import { useState } from "react";
+
+
+export default function FooterForm() {
+    const [email, setEmail] = useState("");
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        alert(`Email registrado: ${email}`);
+    };
+
+    return (
+        <section className="mt-10 pt-6 px-4 sm:px-8 md:px-20">
+            <div className="border-l-2 border-[var(--primary-color)] pl-4 sm:pl-6">
+                <Text className="text-[var(--primary-color)] mb-2 text-[14px]">
+                    Inscreva-se com seu e-mail para receber novidades e atualizações.
+                </Text>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-[var(--primary-color)]">INSCREVA-SE</h2>
+                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 mt-4 w-full max-w-md">
+                    <Input
+                        type="email"
+                        placeholder="Endereço de Email"
+                        className="flex-1"
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <Button>SIGN UP</Button>
+                </form>
+            </div>
+        </section>
+    );
+}
