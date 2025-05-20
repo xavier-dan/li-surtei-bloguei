@@ -1,43 +1,30 @@
 'use client';
 
-import { FavoriteButton } from '../../atoms/main/favoriteButton/FavoriteButton'; 
+import { useFavoritesContext } from '@/app/hooks/useFavoritesContext';
+import { FavoriteButton } from '../../atoms/main/favoriteButton/FavoriteButton';
 import { ShareButton } from '../../atoms/main/shareButton/ShareButton';
-import useFavorite from '@/app/hooks/useFavorite';
-import Text from '../../atoms/main/text/Text';
 import { BookCardProps } from '@/app/types/interfaces/interfaces';
 import ImageCardReview from '../../atoms/main/imageCardReview/ImageCardReview';
+import Text from '../../atoms/main/text/Text';
+
+import { useShareContext } from '@/app/hooks/useShareContext';
 
 export default function ReviewCard({ book }: BookCardProps) {
-    const { favorito, toggleFavorito } = useFavorite();
+    const { isFavorite, toggleFavorite } = useFavoritesContext();
+
+    const favorite = isFavorite(book.id);
 
     const alertaResenha = () => {
-        alert('Resenha em produção!');
-    };
+        alert("Resenha em produção!");
+    }
 
-    const compartilhar = async (e: React.MouseEvent) => {
-        e.stopPropagation();
-        const shareData = {
-            title: book.title,
-            text: `Confira a resenha de "${book.title}"`,
-            url: window.location.href,
-        };
-
-        if (navigator.share) {
-            try {
-                await navigator.share(shareData);
-            } catch (err) {
-                console.error('Erro ao compartilhar:', err);
-            }
-        } else {
-            alert('Compartilhamento não suportado neste navegador.');
-        }
-    };
+    const { toggleShare } = useShareContext();
 
     return (
         <div
             onClick={alertaResenha}
             className="relative h-full flex flex-col border border-black shadow-md overflow-hidden bg-white w-full max-w-sm cursor-pointer
-                hover:shadow-xl hover:scale-[1.03] transition-transform duration-200 ease-in-out"
+                    hover:shadow-xl hover:scale-[1.03] transition-transform duration-200 ease-in-out"
         >
             <ImageCardReview src={book.thumbnail} alt={book.title} />
             <div className="p-4 flex flex-col flex-grow justify-between">
@@ -51,13 +38,16 @@ export default function ReviewCard({ book }: BookCardProps) {
             </div>
             <div className="flex justify-end gap-4 my-4 mr-4">
                 <FavoriteButton
-                    isActive={favorito}
+                    isActive={favorite}
                     onClick={(e) => {
                         e.stopPropagation();
-                        toggleFavorito();
+                        toggleFavorite(book.id);
                     }}
                 />
-                <ShareButton onClick={compartilhar} />
+                <ShareButton onClick={(e) => {
+                    e.stopPropagation();
+                    toggleShare(book)
+                }} />
             </div>
         </div>
     );

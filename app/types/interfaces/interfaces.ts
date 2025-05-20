@@ -56,3 +56,13 @@ export interface GoogleBookItem {
     };
   };
 }
+
+export interface FavoritesContextType {
+  favoriteIds: string[];
+  isFavorite: (id: string) => boolean;
+  toggleFavorite: (id: string) => void;
+}
+
+export interface ShareContextType {
+  toggleShare: (book: {title: string}) => void;
+}
