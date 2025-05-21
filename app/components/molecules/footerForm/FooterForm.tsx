@@ -28,7 +28,7 @@ export default function FooterForm() {
                         className="flex-1"
                         onChange={(e) => setEmail(e.target.value)}
                     />
-                    <Button>SIGN UP</Button>
+                    <Button>INSCREVER</Button>
                 </form>
             </div>
         </section>

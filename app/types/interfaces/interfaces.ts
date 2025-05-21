@@ -64,5 +64,27 @@ export interface FavoritesContextType {
 }
 
 export interface ShareContextType {
-  toggleShare: (book: {title: string}) => void;
+  toggleShare: (book: { title: string }) => void;
+}
+
+export interface FieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  label?: string;
+  error?: string;
+}
+
+export interface TextAreaProps extends React.InputHTMLAttributes<HTMLTextAreaElement> {
+  label?: string;
+  error?: string;
+  rows?: number;
+}
+
+export interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  label?: string;
+  options: { value: string; label: string }[];
+  error?: string;
+}
+
+export interface BtnProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'primary' | 'outline';
+  children: React.ReactNode;
 }

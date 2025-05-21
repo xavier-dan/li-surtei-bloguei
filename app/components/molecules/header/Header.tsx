@@ -24,8 +24,8 @@ export default function Header() {
 
                 <nav className="hidden md:flex space-x-4">
                     <NavLink href="/reviews">RESENHAS</NavLink>
-                    <NavLink href="/contact">CONTATO</NavLink>
                     <NavLink href="/about">SOBRE</NavLink>
+                    <NavLink href="/signUp">CADASTRE-SE</NavLink>
                 </nav>
 
                 <HeaderButton isOpen={menuOpen} onClick={() => setMenuOpen(!menuOpen)} />
@@ -33,10 +33,9 @@ export default function Header() {
             </div>
             {menuOpen && (
                 <nav className="md:hidden px-4 pb-4 flex flex-col space-y-2">
-                    <NavLink href="#">RECIPES + TUTORIALS</NavLink>
-                    <NavLink href="#">RESOURCES</NavLink>
-                    <NavLink href="#">ABOUT</NavLink>
-                    <NavLink href="#">CONTACT</NavLink>
+                    <NavLink href="/reviews">RESENHAS</NavLink>
+                    <NavLink href="/about">SOBRE</NavLink>
+                    <NavLink href="/signUp">CADASTRE-SE</NavLink>
                 </nav>
             )}
         </header>

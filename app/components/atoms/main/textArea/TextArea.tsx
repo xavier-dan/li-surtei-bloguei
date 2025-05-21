@@ -1,16 +1,15 @@
-import { TextAreaProps } from "@/app/types/types/types";
+import { TextAreaProps } from "@/app/types/interfaces/interfaces";
 
-export default function Textarea({placeholder, className, onChange, value, name}: TextAreaProps) {
-  return (
-    <div className="flex flex-col mb-4">
-      <textarea
-        placeholder={placeholder}
-        name={name}
-        rows={4}
-        value={value}
-        onChange={onChange}
-        className={`border border-[var(--form-color)] px-4 py-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] resize-none ${className}`}
-      />
-    </div>
-  );
-}
+const Textarea = ({ label, error, ...props }: TextAreaProps) => (
+  <div>
+    {label && <label className="block text-sm font-medium text-black mb-1">{label}</label>}
+    <textarea
+      {...props}
+      className={`border px-4 py-2 w-full rounded-md focus:outline-none focus:ring-2 ${error ? 'border-red-500 focus:ring-red-300' : 'border-[var(--form-color)] focus:ring-black-700'
+        }`}
+    />
+    {error && <p className="text-sm text-red-500 mt-1">{error}</p>}
+  </div>
+);
+
+export default Textarea;
