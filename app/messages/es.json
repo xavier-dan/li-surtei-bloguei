@@ -1,0 +1,58 @@
+{
+    "HomePage": {
+        "HeroTitle": "NUEVAS RESEÑAS TODOS LOS JUEVES",
+        "HeroText": "Las críticas más locas de Brasil",
+        "HeroButton": "Descubrir",
+        "Latest": "CONSULTA LA ÚLTIMA RESEÑA",
+        "BookTitle": "Rivales Divinos",
+        "Snippet": "Juegos de palabras aparte, este libro es divino."
+    },
+    "Header": {
+        "Reviews": "RESEÑAS",
+        "Comments": "COMENTARIOS",
+        "About": "ACERCA",
+        "SignUp": "REGÍSTRATE"
+    },
+    "Footer": {
+        "SubscribeText": "Suscríbete con tu correo electrónico para recibir noticias y actualizaciones.",
+        "SubscribeTitle": "SUSCRÍBETE",
+        "SubscribeButton": "Registrarse",
+        "Placeholder": "Correo electrónico",
+        "Copyright": "© 2025 - Li, Surtei, Bloguei. Sitio web de Daniel Lacerda"
+    },
+    "BookDetails": {
+        "BookTitle": "Rivales Divinos",
+        "BookReview": "Divine Rivals es un libro que mezcla fantasía, romance y mitología. La escritura es fluida y transporta al lector a un universo lleno de misterios. Además de la aventura, el libro explora temas como la amistad, la lealtad y el sacrificio. Una gran opción para quienes gustan de la fantasía, la acción y el romance.",
+        "Back": "Retornar"
+    },
+    "About": {
+        "AboutTitle": "Acerca del blog",
+        "AboutText": "¡Bienvenidos a mi rincón literario! Aquí comparto mis experiencias con libros, reseñas honestas y todo lo que me hace vibrar en este mundo de historias. Ya sea que seas un lector ávido o alguien que busca su próxima lectura, este espacio está diseñado con amor para inspirar y conectar a amantes de los libros como yo."
+    },
+    "Comments": {
+        "Title": "COMENTARIOS RECIENTES"
+    },
+    "SignUp": {
+        "Title": "REGÍSTRATE",
+        "Text": "Regístrate para acceder a todo el contenido de Li, Surtei, Bloguei:",
+        "NameLabel": "Nombre completo",
+        "NamePlacehoder": "Su nombre",
+        "EmailLabel": "Correo electrónico",
+        "EmailPlaceholder": "su@correoelectronico.com",
+        "PasswordLabel": "Contraseña",
+        "PasswordPlaceholder": "Ingresa tu contraseña",
+        "GenderLabel": "Género",
+        "MaleLabel": "Masculino",
+        "FemaleLabel": "Femenino",
+        "OtherLabel": "Otro",
+        "MessageLabel": "Mensaje",
+        "MessagePlaceholder": "Escribe un mensaje...",
+        "PrivacyLabel": "He leído y acepto las condiciones de uso",
+        "CleanButton": "Limpiar",
+        "SubmitButton": "Enviar",
+        "SubmittingButton": "Enviando..."
+    },
+    "Review": {
+        "Title": "RESEÑAS"
+    }
+}

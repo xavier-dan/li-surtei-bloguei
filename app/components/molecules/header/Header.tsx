@@ -6,9 +6,12 @@ import NavLink from '../../atoms/header/navLink/NavLink';
 import Photo from '@/public/logo_lsb.png';
 import HeaderButton from '../../atoms/header/headerButton/HeaderButton';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
+
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const t = useTranslations('Header')
 
     return (
         <header className="w-full bg-[var(--header-bg-color)] shadow-md">
@@ -23,9 +26,10 @@ export default function Header() {
                 />
 
                 <nav className="hidden md:flex space-x-4">
-                    <NavLink href="/reviews">RESENHAS</NavLink>
-                    <NavLink href="/about">SOBRE</NavLink>
-                    <NavLink href="/signUp">CADASTRE-SE</NavLink>
+                    <NavLink href="/reviews">{t('Reviews')}</NavLink>
+                    <NavLink href="/about">{t('About')}</NavLink>
+                    <NavLink href="/comments">{t('Comments')}</NavLink>
+                    <NavLink href="/signUp">{t('SignUp')}</NavLink>
                 </nav>
 
                 <HeaderButton isOpen={menuOpen} onClick={() => setMenuOpen(!menuOpen)} />
@@ -33,9 +37,10 @@ export default function Header() {
             </div>
             {menuOpen && (
                 <nav className="md:hidden px-4 pb-4 flex flex-col space-y-2">
-                    <NavLink href="/reviews">RESENHAS</NavLink>
-                    <NavLink href="/about">SOBRE</NavLink>
-                    <NavLink href="/signUp">CADASTRE-SE</NavLink>
+                    <NavLink href="/reviews">{t('Reviews')}</NavLink>
+                    <NavLink href="/about">{t('About')}</NavLink>
+                    <NavLink href="/comments">{t('Comments')}</NavLink>
+                    <NavLink href="/signUp">{t('SignUp')}</NavLink>
                 </nav>
             )}
         </header>

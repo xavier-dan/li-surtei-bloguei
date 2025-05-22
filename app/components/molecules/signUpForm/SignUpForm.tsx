@@ -8,11 +8,12 @@ import Textarea from '../../atoms/main/textArea/TextArea';
 import Radio from '../../atoms/main/radio/Radio';
 import Checkbox from '../../atoms/main/checkbox/Checkbox';
 import Button from '../../atoms/main/button/Button';
+import { useTranslations } from 'next-intl';
 
 const cadastroSchema = z.object({
     nome: z.string().min(3, { message: 'O nome deve ter pelo menos 3 caracteres.' }),
     email: z.string().email({ message: 'Email inválido.' }),
-    senha: z.string().min(6, { message: 'A senha deve ter pelo menos 6 caracteres.'}),
+    senha: z.string().min(6, { message: 'A senha deve ter pelo menos 6 caracteres.' }),
     mensagem: z
         .string()
         .min(10, { message: 'A mensagem deve ter no mínimo 10 caracteres.' })
@@ -26,12 +27,6 @@ const cadastroSchema = z.object({
 });
 
 type CadastroFormData = z.infer<typeof cadastroSchema>;
-
-const opcoesGenero = [
-    { value: 'masculino', label: 'Masculino' },
-    { value: 'feminino', label: 'Feminino' },
-    { value: 'outro', label: 'Outro' },
-];
 
 const SignUpForm = () => {
     const {
@@ -56,29 +51,36 @@ const SignUpForm = () => {
         reset();
     };
 
+    const t = useTranslations('SignUp');
+    const opcoesGenero = [
+        { value: 'masculino', label: t('MaleLabel') },
+        { value: 'feminino', label: t('FemaleLabel') },
+        { value: 'outro', label: t('OtherLabel') },
+    ];
+
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
             className="space-y-6 p-6 max-w-2xl mx-auto bg-white shadow-lg rounded-lg"
         >
-            <Input label="Nome completo" placeholder="Seu nome" {...register('nome')} error={errors.nome?.message} />
+            <Input label={t('NameLabel')} placeholder={t('NamePlaceholder')} {...register('nome')} error={errors.nome?.message} />
 
-            <Input label="Email" type="email" placeholder="seu@email.com" {...register('email')} error={errors.email?.message} />
+            <Input label={t('EmailLabel')} type="email" placeholder={t('EmailPlaceholder')} {...register('email')} error={errors.email?.message} />
 
-            <Input label="Senha" type="password" placeholder="Digite sua senha" {...register('senha')} error={errors.senha?.message} />
+            <Input label={t('PasswordLabel')} type="password" placeholder={t('PasswordPlaceholder')} {...register('senha')} error={errors.senha?.message} />
 
-            <Radio label="Gênero" options={opcoesGenero} {...register('genero')} error={errors.genero?.message} />
+            <Radio label={t('GenderLabel')} options={opcoesGenero} {...register('genero')} error={errors.genero?.message} />
 
-            <Textarea label="Mensagem" placeholder="Escreva uma mensagem..." rows={4} {...register('mensagem')} error={errors.mensagem?.message} />
+            <Textarea label={t('MessageLabel')} placeholder={t('MessagePlaceholder')} rows={4} {...register('mensagem')} error={errors.mensagem?.message} />
 
-            <Checkbox label="Li e aceito os termos de uso" {...register('termos')} error={errors.termos?.message} />
+            <Checkbox label={t('PrivacyLabel')} {...register('termos')} error={errors.termos?.message} />
 
             <div className="flex justify-end gap-4 pt-4">
                 <Button type="button" variant="outline" onClick={() => reset()} disabled={isSubmitting}>
-                    Limpar
+                    {t('CleanButton')}
                 </Button>
                 <Button type="submit" disabled={isSubmitting}>
-                    {isSubmitting ? 'Enviando...' : 'Cadastrar'}
+                    {isSubmitting ? t('SubmittingButton') : t('SubmitButton')}
                 </Button>
             </div>
         </form>

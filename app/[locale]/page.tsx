@@ -1,5 +1,5 @@
 import React from 'react';
-import Start from './[locale]/home/page';
+import Start from './home/page';
 
 export default function Home() {
   return (

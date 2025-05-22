@@ -1,4 +1,5 @@
 import React from 'react';
+import type { ImgHTMLAttributes } from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import ReviewCard from '../ReviewCard';
@@ -23,7 +24,7 @@ jest.mock('@/app/hooks/useShareContext', () => ({
 
 jest.mock('next/image', () => ({
     __esModule: true,
-    default: (props: any) => <img {...props} alt={props.alt} />,
+    default: (props: ImgHTMLAttributes<HTMLImageElement>) => <img {...props} alt={props.alt} />,
 }));
 
 const mockBook: BookCardProps['book'] = {

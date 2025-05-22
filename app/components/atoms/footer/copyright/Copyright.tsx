@@ -1,9 +1,13 @@
 import React from 'react';
+import { useTranslations } from 'next-intl';
+
 
 export default function Copyright() {
+    const t = useTranslations('Footer');
+
     return (
         <div className='mx-4'>
-            <p>&copy; 2025 - Li, Surtei, Bloguei. Site por Daniel Lacerda</p>
+            <p>{t('Copyright')}</p>
         </div>
     );
 }

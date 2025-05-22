@@ -1,0 +1,58 @@
+{
+    "HomePage": {
+        "HeroTitle": "NEW REVIEWS EVERY THURSDAY",
+        "HeroText": "The most crazy reviews in Brazil",
+        "HeroButton": "Find out",
+        "Latest": "CHECK THE LATEST REVIEW",
+        "BookTitle": "Divine Rivals",
+        "Snippet": "Jokes aside, this book is divine"
+    },
+    "Header": {
+        "Reviews": "REVIEWS",
+        "Comments": "COMMENTS",
+        "About": "ABOUT",
+        "SignUp": "SIGN UP"
+    },
+    "Footer": {
+        "SubscribeText": "Subscribe with your email to receive news and updates.",
+        "SubscribeTitle": "SUBSCRIBE",
+        "SubscribeButton": "Sign up",
+        "Placeholder": "Email address",
+        "Copyright": "© 2025 - Li, Surtei, Bloguei. Site by Daniel Lacerda"
+    },
+    "BookDetails": {
+        "BookTitle": "Divine Rivals",
+        "BookReview": "Divine Rivals is a book that mixes fantasy, romance and mythology. The writing is fluid and transports the reader to a universe full of mysteries. In addition to adventure, the book explores themes such as friendship, loyalty and sacrifice. A great option for those who like fantasy, action and romance.",
+        "Back": "Back"
+    },
+    "About": {
+        "AboutTitle": "About the Blog",
+        "AboutText": "Welcome to my little literary corner! Here I share my experiences with books, honest reviews, and everything that makes me excited about this world of stories. Whether you are an avid reader or someone looking for your next read, this space is made with love to inspire and connect book lovers like me."
+    },
+    "Comments": {
+        "Title": "RECENT COMMENTS"
+    },
+    "SignUp": {
+        "Title": "SIGN UP",
+        "Text": "Sign up to access all the content on Li, Surtei, Bloguei:",
+        "NameLabel": "Full Name",
+        "NamePlacehoder": "Your name",
+        "EmailLabel": "Email",
+        "EmailPlaceholder": "your@email.com",
+        "PasswordLabel": "Password",
+        "PasswordPlaceholder": "Type your password",
+        "GenderLabel": "Gender",
+        "MaleLabel": "Male",
+        "FemaleLabel": "Female",
+        "OtherLabel": "Other",
+        "MessageLabel": "Message",
+        "MessagePlaceholder": "Write a message...",
+        "PrivacyLabel": "I have read and accept the terms of use",
+        "CleanButton": "Clean",
+        "SubmitButton": "Submit",
+        "SubmittingButton": "Submitting..."
+    },
+    "Review": {
+        "Title": "REVIEWS"
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "HomePage": {
+        "HeroTitle": "NOVAS RESENHAS TODA QUINTA-FEIRA",
+        "HeroText": "As resenhas mais surtadas do Brasil",
+        "HeroButton": "Conheça",
+        "Latest": "CONFIRA A ÚLTIMA RESENHA",
+        "BookTitle": "Divinos Rivais",
+        "Snippet": "Trocadilhos a parte, esse livro é divino."
+    },
+    "Header": {
+        "Reviews": "RESENHAS",
+        "Comments": "COMENTÁRIOS",
+        "About": "SOBRE",
+        "SignUp": "CADASTRE-SE"
+    },
+    "Footer": {
+        "SubscribeText": "Inscreva-se com seu e-mail para receber novidades e atualizações.",
+        "SubscribeTitle": "INSCREVA-SE",
+        "SubscribeButton": "Inscrever",
+        "Placeholder": "Endereço de email",
+        "Copyright": "© 2025 - Li, Surtei, Bloguei. Site por Daniel Lacerda"
+    },
+    "BookDetails": {
+        "BookTitle": "Divinos Rivais",
+        "BookReview": "Divinos Rivais é um livro que mistura fantasia, romance e mitologia. A escrita é fluida e transporta o leitor para um universo cheio de mistérios. Além da aventura, o livro explora temas como amizade, lealdade e sacrifício.Uma ótima opção para quem gosta de fantasia, ação e romance.",
+        "Back": "Voltar"
+    },
+    "About": {
+        "AboutTitle": "Sobre o Blog",
+        "AboutText": " Bem-vindo ao meu cantinho literário! Aqui compartilho minhas experiências com livros, resenhas sinceras, e tudo o que me faz vibrar nesse mundo de histórias. Seja você um leitor ávido ou alguém buscando a próxima leitura, esse espaço é feito com carinho para inspirar e conectar apaixonados por livros como eu."
+    },
+    "Comments": {
+        "Title": "COMENTÁRIOS RECENTES"
+    },
+    "SignUp": {
+        "Title": "CADASTRE-SE",
+        "Text": "Cadastre-se para ter acesso a todos os conteúdos do Li, Surtei, Bloguei:",
+        "NameLabel": "Nome completo",
+        "NamePlacehoder": "Seu nome",
+        "EmailLabel": "Email",
+        "EmailPlaceholder": "seu@email.com",
+        "PasswordLabel": "Senha",
+        "PasswordPlaceholder": "Digite sua senha",
+        "GenderLabel": "Gênero",
+        "MaleLabel": "Masculino",
+        "FemaleLabel": "Feminino",
+        "OtherLabel": "Outro",
+        "MessageLabel": "Mensagem",
+        "MessagePlaceholder": "Escreva uma mensagem...",
+        "PrivacyLabel": "Li e aceito os termos de uso",
+        "CleanButton": "Limpar",
+        "SubmitButton": "Registrar",
+        "SubmittingButton": "Enviando..."
+    },
+    "Review": {
+        "Title": "RESENHAS"
+    }
+}
